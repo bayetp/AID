@@ -1,0 +1,19 @@
+<?php
+
+include "../php/database.php";
+include "../php/variables.php";
+
+$folderPath = '../img/users/';
+
+$file = $folderPath . $_SESSION["unique"] . '.png';
+
+$image_parts = explode(";base64,", $_POST['image']);
+$image_type_aux = explode("image/", $image_parts[0]);
+$image_type = $image_type_aux[1];
+$image_base64 = base64_decode($image_parts[1]);
+
+file_put_contents($file, $image_base64);
+
+echo json_encode(1);
+
+?>

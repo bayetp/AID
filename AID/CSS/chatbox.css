@@ -1,0 +1,122 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+    --back-color: white;
+    --txt-color: hsl(0, 0%, 15%);
+    --sec-color: rgb(214, 139, 0);
+    --border-color: rgb(201, 201, 201);
+
+}
+
+h1{
+
+    text-align: center;
+
+}
+
+.block{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.block_nvmessage{
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 50%;
+    height: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+}
+
+.block_nvmessage .infos_nvmess i{
+
+    cursor: pointer;
+
+}
+
+.block_message{
+
+    display: flex;
+
+    width: 50%;
+    height: 50px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+}
+
+.block_message img{
+
+    width: 50px;
+    height: 50px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    margin-left: -0.5px;
+
+}
+
+.block_message .infos{
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5px;
+
+    width: 100%;
+
+}
+
+.block_message .infos span{
+
+    margin-top: 3px;
+
+}
+
+.block_message .infos p{
+
+    margin-top: 2px;
+
+    padding-bottom: 20px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+}
+
+.block_message .notif{
+
+    width: 16px;
+    height: 15px;
+
+    background-color: var(--sec-color);
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+
+}

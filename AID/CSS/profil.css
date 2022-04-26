@@ -1,0 +1,474 @@
+body{
+
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+
+    --back-color: white;
+    --txt-color: hsl(0, 0%, 15%);
+    --sec-color: rgb(214, 139, 0);
+    --border-color: rgb(201, 201, 201);
+
+}
+
+.block{
+
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.block .infos{
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.block .infos .infos_user{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.block .vote{
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.block .vote .point{
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    margin-left: 5px;
+
+    border: 1px solid var(--border-color);
+
+}
+
+.block .vote .pointChecked{
+
+    background: var(--border-color);
+
+}
+
+.block .vote #voteValue span{
+
+    color: var(--sec-color);
+    font-size: 15px;
+
+}
+
+.block .vote button{
+
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.block .sendMess a{
+
+    padding: 10px;
+    background-color: var(--sec-color);
+    color: var(--back-color);
+
+    border-radius: 10px;
+
+}
+
+.block .myVote{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+
+    background-color: rgba(129, 129, 129, 0.616);
+
+    display: none;
+
+}
+
+.block .myVote .vote{
+
+    padding: 20px;
+    background-color: var(--back-color);
+
+    border-radius: 10px;
+
+}
+
+.block .myVote button{
+
+    margin-top: 5px;
+    background: var(--sec-color);
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+.block .myVote .point{
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+    margin-left: 5px;
+
+    border: 1px solid var(--border-color);
+
+}
+
+.block .myVote .pointChecked{
+
+    background: var(--border-color);
+
+}
+
+.block .infos .infos_user img{
+
+    width: 100px;
+    height: 100px;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+}
+
+.block_publi{
+
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 330px);
+    row-gap: 30px;
+
+}
+
+.block_publi .publi{
+
+    width: 300px;
+    max-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.block_publi .publi .img{
+
+    width: 300px;
+    height: 200px;
+
+    position: relative;
+
+    margin-top: -0.2px;
+
+}
+
+.block_publi .publi .img img{
+
+    border-radius: 10px;
+
+}
+
+.block_publi .publi .img .profil{
+
+    position: absolute;
+    z-index: 2;
+
+    left: 5px;
+    top: -5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.block_publi .publi .img .profil img{
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+
+}
+
+.block_publi .publi .img .profil h5{
+
+    background-color: var(--sec-color);
+
+    padding: 7px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    color: var(--txt-color) ;
+
+}
+
+.block_publi .publi .img .img_publi{
+
+    width: 300px;
+    height: 200px;
+
+}
+
+.block_publi .publi .img .nbr_img{
+
+    position: absolute;
+    z-index: 1;
+
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 200px;
+
+    background-color: rgba(139, 139, 139, 0.466);
+    color: var(--sec-color);
+
+    border-radius: 10px;
+
+}
+
+.block_publi .publi .img .nbr_img h5{
+
+    padding: 5px;
+    background-color: var(--back-color);
+    border-radius: 10px;
+
+    opacity: 70%;
+
+}
+
+.block_publi .publi .titre{
+
+    text-align: center;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+.block_publi .publi .descript p{
+
+    text-align: center;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    max-width: 270px;
+
+}
+
+.block_publi .publi .more{
+
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+.block_publi .publi .more a{
+
+    margin-left: 5px;
+    
+}
+
+.block_publi .publi .more h5{
+
+    cursor: pointer;
+    
+}
+
+.block_publi .publi .more .modifPubli{
+
+    padding: 5px;
+
+    background-color: var(--sec-color);
+
+    border-radius: 10px;
+
+    margin-bottom: 17px;
+
+    color: var(--back-color);
+    
+}
+
+/* POP UP */
+
+.popUpPubli{
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    position: fixed;
+
+    background-color: var(--backTrans-color);
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+}
+
+.popUpPubli .popUp{
+
+    width: 600px;
+    height: 700px;
+
+    background-color: var(--back-color);
+
+    border-radius: 10px;
+
+    border: 1px var(--border-color) solid;
+
+    position: relative;
+
+}
+
+.popUpPubli .popUp .close{
+
+    z-index: 20;
+
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: var(--sec-color);
+
+}
+
+.popUpPubli .popUp .img{
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.popUpPubli .popUp .arrow{
+
+    position: absolute;
+
+    font-size: 50px;
+
+    background-color: var(--backTrans-color);
+
+    height: 350px;
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+}
+
+.popUpPubli .popUp .arrowSuiv{
+
+    top: 0px;
+    right: 0;
+
+    border-top-right-radius: 10px;
+
+}
+
+.popUpPubli .popUp .arrowPrec{
+
+    top: 0px;
+    left: 0;
+
+    border-top-left-radius: 10px;
+
+}
+
+.popUpPubli .popUp .img img{
+
+    width: 600px;
+    height: 350px;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.popUpPubli .popUp .champs{
+
+    text-align: center;
+
+}

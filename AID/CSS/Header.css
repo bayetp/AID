@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+
+    --back-color: white;
+    --txt-color: hsla(0, 0%, 15%, 0.849);
+    --sec-color: rgb(0, 136, 199);
+    --border-color: rgba(111, 209, 255, 0.719);
+    --backTrans-color: rgba(151, 151, 151, 0.527);
+
+    color: var(--txt-color);
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: var(--back-color);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+a{
+
+    text-decoration: none;
+    color: var(--txt-color);
+
+}
+
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px var(--border-color) solid;
+
+    height: 100px;
+
+    padding-right: 50px;
+
+}
+
+.navbar .name_site{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 50px;
+
+}
+
+.navbar .name_site h2{
+
+    background-color: var(--back-color);
+    color: var(--txt-color);
+
+}   
+
+.navbar .name_site h2 span{
+
+    color: var(--sec-color);
+
+}
+
+.menu_navbar{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu_navbar a{
+
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+.menu_navbar a i{
+
+    position: relative;
+
+}
+
+.menu_navbar a .notif{
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: var(--sec-color);
+
+    position: absolute;
+
+    top: -5px;
+    right: 0;
+
+}
+
+.add_publi{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(129, 129, 129, 0.616);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+
+}
+
+.add_publi .block_add_publi{
+
+    background-color: var(--back-color);
+
+    width: 600px;
+    height: 500px;
+    max-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+
+}
+
+.add_publi .block_add_publi .close{
+
+    width: 90%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 10px;
+
+}
+
+.add_publi .block_add_publi .close i{
+
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.add_publi .block_add_publi .img input[type=file]{
+
+    display: none;
+}
+
+.add_publi .block_add_publi .img img{
+
+    width: 300px;
+    height: 200px;
+
+    cursor: pointer;
+
+}
+
+.add_publi .block_add_publi .champs{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.add_publi .block_add_publi .champs .champ{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+}
+
+.add_publi .block_add_publi .champs .champ input[type=text]{
+
+    width: 90%;
+
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+.add_publi .block_add_publi .champs .champ textarea{
+
+    min-width: 90%;
+    max-width: 90%;
+
+    min-height: 230px;
+    max-height: 230px;
+
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+.add_publi .block_add_publi button{
+
+    width: 90%;
+
+    margin-top: 10px;
+    padding: 10px;
+    
+    background: var(--sec-color);
+    border: 1px var(--border-color) solid;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}

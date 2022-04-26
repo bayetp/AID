@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    --back-color: white;
+    --txt-color: hsl(0, 0%, 15%);
+    --sec-color: rgb(214, 139, 0);
+    --border-color: rgb(201, 201, 201);
+
+}
+
+.screen {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#container{
+    width:400px;
+    border-radius: 30px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid var(--back-color);
+    background: var(--back-color);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 30px;
+}
+#container h1{
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text],
+input[type=password],
+input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: var(--txt-color);
+    color: var(--back-color);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.btn-connect{
+
+    background-color: var(--txt-color);
+    color: var(--back-color);
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 30px;
+
+    text-align: center;
+
+}
+
+.btn-connect-a{
+
+    text-decoration: none;
+    color: var(--back-color);
+
+}
+
+.btn-connect:hover a{
+    background-color: var(--back-color);
+    color: var(--txt-color);
+}

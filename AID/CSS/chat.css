@@ -1,0 +1,401 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+    --back-color: white;
+    --txt-color: hsl(0, 0%, 15%);
+    --sec-color: rgb(214, 139, 0);
+    --border-color: rgb(201, 201, 201);
+
+}
+
+.block{
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.block .header{
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--back-color);
+
+    margin-bottom: 10px;
+    border-bottom: 1px var(--border-color) solid;
+
+}
+
+.block .header .profil{
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--back-color);
+
+    cursor: pointer;
+
+}
+
+.block .header img{
+
+    width: 50px;
+    height: 50px;
+
+    margin-left: 20px;
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+}
+
+.block .no_mess{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.block .no_mess img{
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+}
+
+.block .mess_zone{
+
+    width: 100%;
+    height: calc(100vh - 100px - 72px - 40px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.block .mess_zone #nbrMess{
+
+    display: none;
+
+}
+
+.block .mess_zone .mess{
+
+    width: 90%;
+
+    margin-bottom: 10px;
+
+}
+
+.block .mess_zone .mess_left{
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.block .mess_zone .mess_right{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.block .mess_zone .mess .infos{
+
+    max-width: 400px;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.block .mess_zone .mess .infos p{
+
+    margin: 0;
+    padding: 5px;
+
+}
+
+.block .mess_zone .mess_left h5{
+
+    margin-left: 5px;
+    margin-bottom: 0;
+
+}
+
+.block .mess_zone .mess_right h5{
+
+    margin-right: 5px;
+    margin-bottom: 0;
+
+}
+
+.block .mess_zone .mess_right .infos span{
+
+    margin-left: 5px;
+    cursor: pointer;
+
+    position: relative;
+
+    display: none;
+
+}
+
+.block .mess_zone .mess_right .infos:hover span{    
+
+    display: block !important;
+
+}
+
+.block .mess_zone .mess_right .infos span .options{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    z-index: 10;
+
+    padding: 5px;
+
+    position: absolute;
+
+    right: 0;
+    bottom: -40px;
+
+    background-color: var(--sec-color);
+    color: var(--back-color);
+
+    border-radius: 10px;
+
+    display: none;
+
+}
+
+.block .mess_zone .mess_right .infos span .options i{
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.block .mess_zone .mess_left .infos span{
+
+    margin-left: 5px;
+    cursor: pointer;
+
+    position: relative;
+
+    display: none;
+
+}
+
+.block .mess_zone .mess_left .infos:hover span{    
+
+    display: block !important;
+
+}
+
+.block .mess_zone .mess_left .infos span .options{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    z-index: 10;
+
+    padding: 5px;
+
+    position: absolute;
+
+    right: 0;
+    bottom: -40px;
+
+    background-color: var(--sec-color);
+    color: var(--back-color);
+
+    border-radius: 10px;
+
+    display: none;
+
+}
+
+.block .mess_zone .mess_left .infos span .options i{
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.block .mess_zone .mess_left .infos{
+
+    background-color: var(--sec-color);
+
+}
+
+.block .mess_zone .mess_right .infos{
+
+    background-color: var(--back-color);
+    border: 1px var(--border-color) solid;
+
+}
+
+.block .send_zone{
+
+    width: 100%;
+
+    min-height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+
+    bottom: 0;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-top: 1px var(--border-color) solid;
+
+    position: relative;
+
+}
+
+.block .send_zone .publi_zone{
+
+    position: absolute;
+
+    right: 0;
+    bottom: 50px;
+
+}
+
+.block .send_zone textarea{
+
+    min-width: 80%;
+    max-width: 80%;
+
+    min-height: 17px;
+    max-height: 100px;
+
+    height: 17px;
+
+    border-radius: 10px;
+
+    padding: 5px;
+
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.block .send_zone button{
+
+    margin-left: 10px;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+.block .send_zone button:hover{
+
+    color: var(--sec-color);
+
+}
+
+.block .vu{
+
+    width: 90%;
+
+    text-align: right;
+
+}
+
+.publi_block{
+
+    width: 100%;
+    display: flex;
+    
+
+}
+
+.publi_right{
+
+    justify-content: flex-end;
+
+}
+
+.publi_left{
+
+    justify-content: flex-start;
+
+    margin-left: 150px;
+
+}
+
+.publi{
+
+    width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px var(--border-color) solid;
+
+    padding: 10px;
+
+    margin-right: 70px;
+
+    border-radius: 10px;
+
+    background-color: var(--back-color);
+
+}
+
+.publi img{
+
+    width: 150px;
+
+}
+
+.publi p{
+
+    text-align: center;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    max-width: 270px;
+
+}
